@@ -1,6 +1,6 @@
 #!/bin/bash 
 # Node JS version 
-node="20.x"
+node="20"
 #MongoDB version
 mongoDB="6.0"
 
@@ -42,8 +42,14 @@ echo "
 " &&
 
 curl -fsSL "https://deb.nodesource.com/setup_${node}.x" | sudo -E bash - &&\
-sudo apt-get install -y nodejs &&echo "node version :" && node --version && echo "npm version :" && npm --version &&
+sudo apt-get install -y nodejs &&echo "node version :" && node --version && 
 
+echo "
+*******************************************************
+ installed Node ${node}
+*******************************************************
+" &&
+apt install npm &&  echo "npm version :" && npm --version &&
 echo "
 *******************************************************
  installed Node ${node}
@@ -73,3 +79,5 @@ echo "
  initialization FINISHED 
 *******************************************************
 "
+
+cd ../ && rm -r MERN_server_init
