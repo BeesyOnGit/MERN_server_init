@@ -42,14 +42,8 @@ echo "
 " &&
 
 curl -fsSL "https://deb.nodesource.com/setup_${node}.x" | sudo -E bash - &&\
-sudo apt-get install -y nodejs &&echo "node version :" && node --version && 
+sudo apt-get install -y nodejs &&echo "node version : " && node --version && echo "npm version : " && npm --version &&
 
-echo "
-*******************************************************
- installed Node ${node}
-*******************************************************
-" &&
-apt install npm &&  echo "npm version :" && npm --version &&
 echo "
 *******************************************************
  installed Node ${node}
