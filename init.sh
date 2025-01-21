@@ -68,6 +68,17 @@ echo "
 " &&
 
 sudo systemctl enable mongod.service && sudo chown -R mongodb:mongodb /var/lib/mongodb && sudo chown mongodb:mongodb /tmp/mongodb-27017.sock && sudo service mongod restart
+&& echo "
+*******************************************************
+ installing certbot and nginx-module 
+*******************************************************
+" &&
+apt install certbot python3-certbot-nginx
+&& echo "
+*******************************************************
+ installed certbot and nginx-module 
+*******************************************************
+" &&
 echo "
 *******************************************************
  initialization FINISHED 
